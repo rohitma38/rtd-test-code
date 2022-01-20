@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utils_master module &mdash; Dhwani  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="utils_fmp module" href="utils_fmp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Dhwani
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">library-work</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils_cnn.html">utils_cnn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils_fmp.html">utils_fmp module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">utils_master module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dhwani</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">library-work</a> &raquo;</li>
+      <li>utils_master module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/utils_master.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-utils_master">
+<span id="utils-master-module"></span><h1>utils_master module<a class="headerlink" href="#module-utils_master" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.ACF_DFT_sal">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">ACF_DFT_sal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_ACF_lag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_ACF_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_ACF_hop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.ACF_DFT_sal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.annotationsToFMPFormat">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">annotationsToFMPFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.annotationsToFMPFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Converts 2 column (Time, Label) format into FMP format ([start time, end time, label])</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> – path to annotations file</p></li>
+<li><p><strong>duration</strong> – provide one of duration or end time of audio to use in last row of converted annotation</p></li>
+<li><p><strong>endTime</strong> – provide one of duration or end time of audio to use in last row of converted annotation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>annotations in FMP format</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>annotFMP</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.biphasicDerivative">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">biphasicDerivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tHop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rectify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.biphasicDerivative" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a biphasic derivative (See [1] for a detailed explanation of the algorithm)</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>x: input signal
+tHop: frame- or hop-length used to obtain input signal values (reciprocal of sampling rate of x)
+norm: if output is to be normalized
+rectify: if output is to be rectified to keep only positive values (sufficient for peak-picking)</p>
+</dd>
+<dt>Returns</dt><dd><p>x: after performing the biphasic derivative of input x (i.e, convolving with a biphasic derivative filter)</p>
+</dd>
+</dl>
+<p>[1] Rao, P., Vinutha, T.P. and Rohit, M.A., 2020. Structural Segmentation of Alap in Dhrupad Vocal Concerts. Transactions of the International Society for Music Information Retrieval, 3(1), pp.137–152. DOI: <a class="reference external" href="http://doi.org/10.5334/tismir.64">http://doi.org/10.5334/tismir.64</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.check_segment_annotations">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">check_segment_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.check_segment_annotations" title="Permalink to this definition"></a></dt>
+<dd><p>Checks segment annotation. If label is missing, adds an default label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> – A List of the form of [(start_position, end_position, label), …], or
+[(start_position, end_position), …]</p></li>
+<li><p><strong>default_label</strong> – The default label used if label is missing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A List of tuples in the form of [(start_position, end_position, label), …]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>annot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.color_argument_to_dict">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">color_argument_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gray'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.color_argument_to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a color dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>colors</strong> – Several options: 1. string of FMP_COLORMAPS, 2. string of matplotlib colormap, 3. list or np.ndarray of
+matplotlib color specifications, 4. dict that assigns labels  to colors</p></li>
+<li><p><strong>labels_set</strong> – List of all labels</p></li>
+<li><p><strong>default</strong> – Default color, used for labels that are in labels_set, but not in colors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary that maps labels to colors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>color_dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compressed_gray_cmap">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compressed_gray_cmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compressed_gray_cmap" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a logarithmically or exponentially compressed grayscale colormap</p>
+<p>Notebook: B/B_PythonVisualization.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha</strong> – The compression factor. If alpha &gt; 0, it performs log compression (enhancing black colors).
+If alpha &lt; 0, it performs exp compression (enhancing white colors).
+Raises an error if alpha = 0.</p></li>
+<li><p><strong>N</strong> – The number of rgb quantization levels (usually 256 in matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The colormap</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>color_wb</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_SM_TI">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_SM_TI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempo_rel_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_SM_TI" title="Permalink to this definition"></a></dt>
+<dd><p>Compute enhanced similaity matrix by applying path smoothing and transpositions</p>
+<p>Notebook: C4/C4S2_SSM-TranspositionInvariance.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – Input feature sequences</p></li>
+<li><p><strong>Y</strong> – Input feature sequences</p></li>
+<li><p><strong>L</strong> – Length of filter</p></li>
+<li><p><strong>tempo_rel_set</strong> – Set of relative tempo values</p></li>
+<li><p><strong>shift_set</strong> – Set of shift indices</p></li>
+<li><p><strong>direction</strong> – Direction of smoothing (0: forward; 1: backward; 2: both directions)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Transposition-invariant SM
+I_TI: Transposition index matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>S_TI</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_SM_dot">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_SM_dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_SM_dot" title="Permalink to this definition"></a></dt>
+<dd><p>Computes similarty matrix from feature sequences using dot (inner) product
+Notebook: C4/C4S2_SSM.ipynb</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_SSM">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_SSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_smooth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempo_rel_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([1])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relative'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binarize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'chroma'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_SSM" title="Permalink to this definition"></a></dt>
+<dd><p>Compute an SSM</p>
+<p>Notebook: C4S2_SSM-Thresholding.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – Feature sequence</p></li>
+<li><p><strong>L_smooth</strong> – Parameters for computing SSM</p></li>
+<li><p><strong>tempo_rel_set</strong> – Parameters for computing SSM</p></li>
+<li><p><strong>shift_set</strong> – Parameters for computing SSM</p></li>
+<li><p><strong>strategy</strong> – Parameters used for tresholding SSM</p></li>
+<li><p><strong>scale</strong> – Parameters used for tresholding SSM</p></li>
+<li><p><strong>thresh</strong> – Parameters used for tresholding SSM</p></li>
+<li><p><strong>penalty</strong> – Parameters used for tresholding SSM</p></li>
+<li><p><strong>binarize</strong> – Parameters used for tresholding SSM</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SSM and index matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>S_thresh, I</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_kernel_checkerboard_Gaussian">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_kernel_checkerboard_Gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_kernel_checkerboard_Gaussian" title="Permalink to this definition"></a></dt>
+<dd><p>Compute Guassian-like checkerboard kernel [FMP, Section 4.4.1]
+See also: <a class="reference external" href="https://scipython.com/blog/visualizing-the-bivariate-gaussian-distribution/">https://scipython.com/blog/visualizing-the-bivariate-gaussian-distribution/</a></p>
+<p>Notebook: C4/C4S4_NoveltySegmentation.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>L</strong> – Parameter specifying the kernel size M=2*L+1</p></li>
+<li><p><strong>var</strong> – Variance parameter determing the tapering (epsilon)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Kernel matrix of size M x M</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>kernel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_local_average">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_local_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_local_average" title="Permalink to this definition"></a></dt>
+<dd><p>Compute local average of signal</p>
+<p>Notebook: C6/C6S1_NoveltySpectral.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Signal</p></li>
+<li><p><strong>M</strong> – Determines size (2M+1*Fs) of local average</p></li>
+<li><p><strong>Fs</strong> – Sampling rate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Local average signal</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>local_average</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.compute_novelty_SSM">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">compute_novelty_SSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.compute_novelty_SSM" title="Permalink to this definition"></a></dt>
+<dd><p>Compute novelty function from SSM [FMP, Section 4.4.1]</p>
+<p>Notebook: C4/C4S4_NoveltySegmentation.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> – SSM</p></li>
+<li><p><strong>kernel</strong> – Checkerboard kernel (if kernel==None, it will be computed)</p></li>
+<li><p><strong>L</strong> – Parameter specifying the kernel size M=2*L+1</p></li>
+<li><p><strong>var</strong> – Variance parameter determing the tapering (epsilon)</p></li>
+<li><p><strong>exclude</strong> – Sets the first L and last L values of novelty function to zero</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Novelty function</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nov</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.convert_structure_annotation">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">convert_structure_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ann</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_digits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.convert_structure_annotation" title="Permalink to this definition"></a></dt>
+<dd><p>Convert structure annotations</p>
+<p>Notebook: C4/C4S1_MusicStructureGeneral.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ann</strong> – Structure annotions</p></li>
+<li><p><strong>Fs</strong> – Sampling rate</p></li>
+<li><p><strong>remove_digits</strong> – Remove digits from labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converted annotation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ann_converted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.drawAnnotation">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">drawAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'purple'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.drawAnnotation" title="Permalink to this definition"></a></dt>
+<dd><p>Draws annotations on ax</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>cyclePath: path to the cycle annotation file
+numDiv: number of equally spaced divisions to add between pairs of annotations (numDiv - 1 timestamps will be added between each pair)
+startTime: start time of audio being analysed
+endTime: end time of audio being analysed
+ax: axis to plot in
+c: colour to plot lines in
+y: y coordinate for annotated cycle number text
+size: font size for annotated text</p>
+</dd>
+<dt>Returns</dt><dd><p>ax: axis that has been plotted in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.drawAnnotationV2">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">drawAnnotationV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Time',</span> <span class="pre">'Cycle']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'purple'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.drawAnnotationV2" title="Permalink to this definition"></a></dt>
+<dd><p>Draws annotations on ax</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>cyclePath: path to the cycle annotation file
+numDiv: number of equally spaced divisions to add between pairs of annotations (numDiv - 1 timestamps will be added between each pair)
+startTime: start time of audio being analysed
+endTime: end time of audio being analysed
+ax: axis to plot in
+columns: list of column (header) names in the annotation file
+c: colour to plot lines in
+y: y coordinate for annotated cycle number text
+size: font size for annotated text</p>
+</dd>
+<dt>Returns</dt><dd><p>ax: axis that has been plotted in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.drawSyllablesBols">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">drawSyllablesBols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeOffset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.drawSyllablesBols" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.drawWave">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">drawWave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audioPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freqXlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Waveform'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cAnnot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'purple'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.drawWave" title="Permalink to this definition"></a></dt>
+<dd><p>Plots the wave plot of the audio</p>
+<p>audioPath: path to the audio file
+startTime: time to start reading the audio at
+endTime: time to stop reading the audio at
+ax: axis to plot waveplot in
+xticks: if True, will plot xticklabels
+freqXlabels: time (in seconds) after which each x label occurs
+annotate: if True, will annotate tala markings
+cyclePath: path to file with tala cycle annotations
+numDiv: number of divisions to put between each annotation marking
+cAnnot: colour for the annotation marking</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.fadeIn">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">fadeIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.fadeIn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.fadeOut">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">fadeOut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.fadeOut" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.filter_diag_mult_SM">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">filter_diag_mult_SM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempo_rel_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.filter_diag_mult_SM" title="Permalink to this definition"></a></dt>
+<dd><p>Path smoothing of similarity matrix by filtering in forward or backward direction
+along various directions around main diagonal
+Note: Directions are simulated by resampling one axis using relative tempo values</p>
+<p>Notebook: C4/C4S2_SSM-PathEnhancement.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> – Self-similarity matrix (SSM)</p></li>
+<li><p><strong>L</strong> – Length of filter</p></li>
+<li><p><strong>tempo_rel_set</strong> – Set of relative tempo values</p></li>
+<li><p><strong>direction</strong> – Direction of smoothing (0: forward; 1: backward)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Smoothed SM</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>S_L_final</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.generateFig">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">generateFig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">noRows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heightRatios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.generateFig" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a matplotlib.pyplot.figure and axes to plot in</p>
+<p>Axes in the plot are stacked vertically in one column, with height of each axis determined by heightRatios</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>noRows: number of rows in the figure
+figSize: (width, height) in inches  of the figure
+heightRatios: list of the fraction of height that each axis should take; len(heightRatios) has to be equal to noRows</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>figure object
+axs: list of axes objects</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.getOnsetActivation">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">getOnsetActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_fft</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vocal'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audioPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.getOnsetActivation" title="Permalink to this definition"></a></dt>
+<dd><p>Computes onset activation function</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>x: audio signal
+audioPath: path to the audio file
+startTime: time to start reading the audio at
+endTime: time to stop reading audio at
+fs: sampling rate to read audio at
+win_dur: window duration in seconds for STFT
+hop_dur: hop duration in seconds for STFT
+n_fft: DFT size
+source: choice of instrument - ‘vocal’ or ‘perc’ (perc for percussion)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.normalize_feature_sequence">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">normalize_feature_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.normalize_feature_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>Normalizes the columns of a feature sequence</p>
+<p>Notebook: C3/C3S1_FeatureNormalization.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – Feature sequence</p></li>
+<li><p><strong>norm</strong> – The norm to be applied. ‘1’, ‘2’, ‘max’ or ‘z’</p></li>
+<li><p><strong>threshold</strong> – An threshold below which the vector <cite>v</cite> used instead of normalization</p></li>
+<li><p><strong>v</strong> – Used instead of normalization below <cite>threshold</cite>. If None, uses unit vector for given norm</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Normalized feature sequence</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>X_norm</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.pitchCountour">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">pitchCountour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audioPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minPitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxPitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tonic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">octaveJumpCost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">veryAccurate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freqXlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Pitch</span> <span class="pre">Contour</span> <span class="pre">(cents)'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.pitchCountour" title="Permalink to this definition"></a></dt>
+<dd><p>Returns pitch contour for the audio file</p>
+<p>Uses <cite>plotPitch</cite> to plot pitch contour if ax is not None.</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>audioPath: path to audio file
+startTime: time to start reading audio file
+endTime: time to end reading audio file
+minPitch: minimum pitch to read for contour extraction
+maxPitch: maximum pitch to read for contour extraction
+notes: list of note objects indicating notes present in the raga
+tonic: tonic of the audio
+timeStep: time steps in which audio is extracted
+octaveJumpCost: parameter passed to pitch detection function
+veryAccurate: parameter passed to pitch detection function
+ax: axis to plot the pitch contour in
+freqXlabels: time (in seconds) after which each x label occurs
+annotate: if True, will annotate tala markings
+cyclePath: path to file with tala cycle annotations
+numDiv: number of divisions to put between each annotation marking
+xticks: if True, will plot xticklabels
+yticks: if True, will plot yticklabels</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>plot of pitch contour if ax was not None
+pitch: pitch object extracted from audio if ax was None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ax</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.playAudio">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">playAudio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audioPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.playAudio" title="Permalink to this definition"></a></dt>
+<dd><p>Plays relevant part of audio</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>audioPath: file path to audio
+startTime: time to start reading audio at
+endTime: time to stop reading audio at</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>iPython.display.Audio object that plays the audio</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.plotPitch">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">plotPitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tonic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freqXlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Pitch</span> <span class="pre">Contour</span> <span class="pre">(cents)'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cAnnot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'purple'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.plotPitch" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the pitch contour from Hz to Cents, and plots it</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>pitch: pitch object from <cite>pitchCountour</cite>
+notes: object for each note used for labelling y-axis
+ax: axis object on which plot is to be plotted
+tonic: tonic (in Hz) of audio clip
+freqXlabels: time (in seconds) after which each x label occurs
+annotate: if true will mark taala markings
+xticks: if True, will print x tick labels
+yticks: if True, will print y tick labels
+annotate: if True,</p>
+</dd>
+<dt>Returns</dt><dd><p>ax: plotted axis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.plotSSM">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">plotSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs_X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ann</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_ann</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Time</span> <span class="pre">(seconds)'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clim_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.plotSSM" title="Permalink to this definition"></a></dt>
+<dd><p>Plot SSM along with annotations (standard setting is time in seconds)
+Notebook: C4/C4S2_SSM.ipynb</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.plot_matrix">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">plot_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs_F</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F_coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Time</span> <span class="pre">(seconds)'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Frequency</span> <span class="pre">(Hz)'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">72</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">3)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.plot_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Plot a matrix, e.g. a spectrogram or a tempogram</p>
+<p>Notebook: B/B_PythonVisualization.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – The matrix</p></li>
+<li><p><strong>Fs</strong> – Sample rate for axis 1</p></li>
+<li><p><strong>Fs_F</strong> – Sample rate for axis 0</p></li>
+<li><p><strong>T_coef</strong> – Time coeffients. If None, will be computed, based on Fs.</p></li>
+<li><p><strong>F_coef</strong> – Frequency coeffients. If None, will be computed, based on Fs_F.</p></li>
+<li><p><strong>xlabel</strong> – Label for x axis</p></li>
+<li><p><strong>ylabel</strong> – Label for y axis</p></li>
+<li><p><strong>title</strong> – Title for plot</p></li>
+<li><p><strong>dpi</strong> – Dots per inch</p></li>
+<li><p><strong>colorbar</strong> – Create a colorbar.</p></li>
+<li><p><strong>colorbar_aspect</strong> – Aspect used for colorbar, in case only a single axes is used.</p></li>
+<li><p><strong>ax</strong> – Either (1.) a list of two axes (first used for matrix, second for colorbar), or (2.) a list with a single
+axes (used for matrix), or (3.) None (an axes will be created).</p></li>
+<li><p><strong>figsize</strong> – Width, height in inches</p></li>
+<li><p><strong>**kwargs</strong> – Keyword arguments for matplotlib.pyplot.imshow</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The created matplotlib figure or None if ax was given.
+ax: The used axes.
+im: The image plot</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.plot_segments">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">plot_segments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'horizontal'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FMP_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nontime_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nontime_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nontime_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time_ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgecolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">72</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjust_nontime_axislim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.plot_segments" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a multi-line plot for annotation data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> – A List of tuples in the form of [(start_position, end_position, label), …]</p></li>
+<li><p><strong>ax</strong> – The Axes instance to plot on. If None, will create a figure and axes.</p></li>
+<li><p><strong>figsize</strong> – Width, height in inches</p></li>
+<li><p><strong>direction</strong> – ‘vertical’ or ‘horizontal’</p></li>
+<li><p><strong>colors</strong> – Several options: 1. string of FMP_COLORMAPS, 2. string of matplotlib colormap, 3. list or np.ndarray of
+matplotlib color specifications, 4. dict that assigns labels  to colors</p></li>
+<li><p><strong>time_min</strong> – Minimal limit for time axis. If None, will be min annotation.</p></li>
+<li><p><strong>time_max</strong> – Maximal limit for time axis. If None, will be max from annotation.</p></li>
+<li><p><strong>nontime_min</strong> – Minimal limit for non-time axis.</p></li>
+<li><p><strong>nontime_max</strong> – Maximal limit for non-time axis.</p></li>
+<li><p><strong>time_axis</strong> – Display time axis ticks or not</p></li>
+<li><p><strong>nontime_axis</strong> – Display non-time axis ticks or not</p></li>
+<li><p><strong>swap_time_ticks</strong> – For horizontal: xticks up; for vertical: yticks left</p></li>
+<li><p><strong>edgecolor</strong> – Color for edgelines of segment box</p></li>
+<li><p><strong>axis_off</strong> – Calls ax.axis(‘off’)</p></li>
+<li><p><strong>dpi</strong> – Dots per inch</p></li>
+<li><p><strong>adjust_nontime_axislim</strong> – Adjust non-time-axis. Usually True for plotting on standalone axes and False for
+overlay plotting</p></li>
+<li><p><strong>alpha</strong> – Alpha value for rectangle</p></li>
+<li><p><strong>print_labels</strong> – Print labels inside Rectangles</p></li>
+<li><p><strong>label_ticks</strong> – Print labels as ticks</p></li>
+<li><p><strong>kwargs</strong> – Keyword arguments for matplotlib.pyplot.annotate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The created matplotlib figure or None if ax was given.
+ax: The used axes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.readCycleAnnotation">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">readCycleAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.readCycleAnnotation" title="Permalink to this definition"></a></dt>
+<dd><p>Function to read cycle annotation and add divisions in the middle if required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cyclePath</strong> – path to the cycle annotation file</p></li>
+<li><p><strong>numDiv</strong> – number of equally spaced divisions to add between pairs of annotations (numDiv - 1 timestamps will be added between each pair)</p></li>
+<li><p><strong>startTime</strong> – start time of audio being analysed</p></li>
+<li><p><strong>endTime</strong> – end time of audio being analysed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a numpy array of annotations from the file
+matras: a numpy array of division between annotations</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>vibhaags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.shift_cyc_matrix">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">shift_cyc_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.shift_cyc_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Cyclic shift of features matrix along first dimension</p>
+<p>Notebook: C4/C4S2_SSM-TranspositionInvariance.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – Feature respresentation</p></li>
+<li><p><strong>shift</strong> – Number of bins to be shifted</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cyclically shifted feature matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>X_cyc</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.smooth_downsample_feature_sequence">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">smooth_downsample_feature_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filt_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">41</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">down_sampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'boxcar'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.smooth_downsample_feature_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>Smoothes and downsamples a feature sequence. Smoothing is achieved by convolution with a filter kernel</p>
+<p>Notebook: C3/C3S1_FeatureSmoothing.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – Feature sequence</p></li>
+<li><p><strong>Fs</strong> – Frame rate of <cite>X</cite></p></li>
+<li><p><strong>filt_len</strong> – Length of smoothing filter</p></li>
+<li><p><strong>down_sampling</strong> – Downsampling factor</p></li>
+<li><p><strong>w_type</strong> – Window type of smoothing filter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Smoothed and downsampled feature sequence
+Fs_feature: Frame rate of <cite>X_smooth</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>X_smooth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.spectralFlux">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">spectralFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">band</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aMin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.spectralFlux" title="Permalink to this definition"></a></dt>
+<dd><p>Computes 1st order rectified spectral flux (difference) of a given STFT input</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>X: input STFT matrix
+fs: sampling rate of audio signal
+band: frequency band over which to compute flux from STFT (sub-band spectral flux)
+aMin: lower threshold value to prevent log(0)
+normalize: whether to normalize output before returning</p>
+</dd>
+<dt>Returns</dt><dd><p>specFlux: array with frame-wise spectral flux values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.spectral_flux_fmp">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">spectral_flux_fmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">W</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">640</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">band</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.spectral_flux_fmp" title="Permalink to this definition"></a></dt>
+<dd><p>Compute spectral-based novelty function</p>
+<p>Notebook: C6/C6S1_NoveltySpectral.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Signal</p></li>
+<li><p><strong>Fs</strong> – Sampling rate</p></li>
+<li><p><strong>N</strong> – Window size</p></li>
+<li><p><strong>H</strong> – Hope size</p></li>
+<li><p><strong>gamma</strong> – Parameter for logarithmic compression</p></li>
+<li><p><strong>M</strong> – Size (frames) of local average</p></li>
+<li><p><strong>norm</strong> – Apply max norm (if norm==1)</p></li>
+<li><p><strong>band</strong> – List of lower and upper spectral freq limits</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Energy-based novelty function
+Fs_feature: Feature rate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>novelty_spectrum</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.spectrogram">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audioPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freqXlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Spectrogram'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyclePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDiv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cAnnot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'purple'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.spectrogram" title="Permalink to this definition"></a></dt>
+<dd><p>Plots spectrogram</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>audioPath: path to the audio file
+startTime: time to start reading the audio at
+endTime: time to stop reading audio at
+cmap: colormap to use to plot spectrogram
+ax: axis to plot spectrogram in
+amin: controls the contrast of the spectrogram; passed into librosa.power_to_db function
+freqXlabels: time (in seconds) after which each x label occurs
+xticks: if true, will print x labels
+yticks: if true, will print y labels
+annotate: if True, will annotate tala markings
+cyclePath: path to file with tala cycle annotations
+numDiv: number of divisions to put between each annotation marking
+cAnnot: colour for the annotation marking</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.subBandEner">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">subBandEner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">band</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.subBandEner" title="Permalink to this definition"></a></dt>
+<dd><p>Computes spectral sub-band energy (suitable for vocal onset detection)</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>X: STFT of an audio signal x
+fs: sampling rate
+band: edge frequencies (in Hz) of the sub-band of interest</p>
+</dd>
+<dt>Returns</dt><dd><p>sbe: array with each value representing the magnitude STFT values in a short-time frame squared &amp; summed over the sub-band</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.subsequences">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">subsequences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.subsequences" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.tempo_period_comb_filter">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">tempo_period_comb_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ACF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.tempo_period_comb_filter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.threshold_matrix">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">threshold_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'absolute'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binarize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.threshold_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Treshold matrix in a relative fashion</p>
+<p>Notebook: C4/C4/C4S2_SSM-Thresholding.ipynb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> – Input matrix</p></li>
+<li><p><strong>thresh</strong> – Treshold (meaning depends on strategy)</p></li>
+<li><p><strong>strategy</strong> – Thresholding strategy (‘absolute’, ‘relative’, ‘local’)</p></li>
+<li><p><strong>scale</strong> – If scale=True, then scaling of positive values to range [0,1]</p></li>
+<li><p><strong>penalty</strong> – Set values below treshold to value specified</p></li>
+<li><p><strong>binarize</strong> – Binarizes final matrix (positive: 1; otherwise: 0)</p></li>
+<li><p><strong>Note</strong> – Binarization is applied last (overriding other settings)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Thresholded matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>S_thresh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.to_dB">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">to_dB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.to_dB" title="Permalink to this definition"></a></dt>
+<dd><p>Applies logarithmic (base 10) transformation</p>
+<dl class="simple">
+<dt>Parameters</dt><dd><p>x: input signal
+C: scaling constant</p>
+</dd>
+<dt>Returns</dt><dd><p>log-scaled x</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils_master.viterbi_tempo_rhythm">
+<span class="sig-prename descclassname"><span class="pre">utils_master.</span></span><span class="sig-name descname"><span class="pre">viterbi_tempo_rhythm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tempo_candidates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transition_penalty</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils_master.viterbi_tempo_rhythm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="utils_fmp.html" class="btn btn-neutral float-left" title="utils_fmp module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, rohitma38.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
