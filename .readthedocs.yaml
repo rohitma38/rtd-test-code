@@ -29,8 +29,8 @@ python:
 submodules:                                                                                                                          
     include: all
     
-# sphinx:
-#   fail_on_warning: true
+sphinx:
+  fail_on_warning: true
 
 formats:
   - pdf
