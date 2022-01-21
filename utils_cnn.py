@@ -113,11 +113,8 @@ def computeLayRatio(audio=None, source='vocal', mode='test', concertName=None, a
 class sfModule(nn.Module):
     '''Short-filter module used for the early layers in the CNN; inherits torch.nn.Module class properties.
     
-    Attributes:
+    Parameters:
         n_ch_in (int): number of channels in the input mel-spectrogram
-
-    Methods:
-        forward: processes the input through the sf module layers    
     '''
     def __init__(self,n_ch_in):
         '''Define the layers in the sfmodule
@@ -150,14 +147,11 @@ class sfModule(nn.Module):
 class mfModule(nn.Module):
     '''Multi-filter module appearing after the short-filter modules; contains parallel convolution layers of different kernel sizes.
 
-    Attributes:
+    Parameters:
         pool_height (int): height dimension of the average pool kernel
         n_ch (int): number of channels in the input to the multi-filter module
         kernel_widths (list): kernel widths of each of the parallel conv layers
         n_filters (list or tuple): (#filters in each parallel conv layer, #filters in the 1x1 conv layer following the concatenation of parallel filter outputs)
-
-    Methods:
-        forward: processes the input through the mf module layers
     '''
     def __init__(self,pool_height,n_ch,kernel_widths,n_filters):
         '''Define the layers in the mfmodule.
@@ -206,14 +200,11 @@ class mfModule(nn.Module):
 class denseModule(nn.Module):
     '''Dense layer module appearing after the multi-filter modules.
 
-    Attributes:
+    Parameters:
         n_ch_in (int): #channels in output of multi-filter module
         input_len (int): width of output of multi-filter module
         input_height (int): width of output of multi-filter module
         n_classes (int): #output classes at output of last dense layer
-
-    Methods:
-        forward: processes the input through the dense module layers
     '''
     def __init__(self,n_ch_in,input_len,input_height,n_classes):
         '''Define the layers in the dense module.
