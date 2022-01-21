@@ -4,7 +4,7 @@ numpy
 scipy
 librosa
 seaborn
-parselmouth
+praat-parselmouth
 soundfile
 ffmpeg
-pytorch
+torch
