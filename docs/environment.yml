@@ -1,0 +1,13 @@
+name: rtd-test-code
+dependencies:
+  - python=3.8
+  - matplotlib
+  - pandas
+  - numpy
+  - scipy
+  - librosa
+  - seaborn
+  - soundfile
+  - ffmpeg
+  - torch
+  - praat-parselmouth
