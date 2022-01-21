@@ -120,7 +120,7 @@ class sfModule(nn.Module):
         forward: processes the input through the module layers    
     '''
     def __init__(self,n_ch_in):
-        '''Define the layers in the module
+        '''Define the layers in the sfmodule
         
         Parameters:
             n_ch_in (int): number of channels in the input mel-spectrogram        
@@ -160,7 +160,7 @@ class mfModule(nn.Module):
         forward: processes the input through the module layers
     '''
     def __init__(self,pool_height,n_ch,kernel_widths,n_filters):
-        '''Define the layers in the module.
+        '''Define the layers in the mfmodule.
         
         Parameters:
             pool_height (int): height dimension of the average pool kernel
@@ -216,7 +216,7 @@ class denseModule(nn.Module):
         forward: processes the input through the module layers
     '''
     def __init__(self,n_ch_in,input_len,input_height,n_classes):
-        '''Define the layers in the module.
+        '''Define the layers in the dense module.
         
         Parameters:
             n_ch_in (int): #channels in output of multi-filter module
