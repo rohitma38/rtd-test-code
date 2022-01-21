@@ -117,7 +117,7 @@ class sfModule(nn.Module):
         n_ch_in (int): number of channels in the input mel-spectrogram
 
     Methods:
-        forward: processes the input through the module layers    
+        forward: processes the input through the sf module layers    
     '''
     def __init__(self,n_ch_in):
         '''Define the layers in the sfmodule
@@ -157,7 +157,7 @@ class mfModule(nn.Module):
         n_filters (list or tuple): (#filters in each parallel conv layer, #filters in the 1x1 conv layer following the concatenation of parallel filter outputs)
 
     Methods:
-        forward: processes the input through the module layers
+        forward: processes the input through the mf module layers
     '''
     def __init__(self,pool_height,n_ch,kernel_widths,n_filters):
         '''Define the layers in the mfmodule.
@@ -213,7 +213,7 @@ class denseModule(nn.Module):
         n_classes (int): #output classes at output of last dense layer
 
     Methods:
-        forward: processes the input through the module layers
+        forward: processes the input through the dense module layers
     '''
     def __init__(self,n_ch_in,input_len,input_height,n_classes):
         '''Define the layers in the dense module.
