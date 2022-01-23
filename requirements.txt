@@ -9,3 +9,4 @@ soundfile
 ffmpeg
 torch
 ipython
+python-opencv
