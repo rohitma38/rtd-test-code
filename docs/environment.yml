@@ -10,8 +10,12 @@ dependencies:
   - scipy
   - librosa
   - seaborn
-  - soundfile
-  - ffmpeg
-  - torch
-  - praat-parselmouth
+  - pip
   - ipython
+  - jupyter
+  - pip:
+    - opencv-python
+    - ffmpeg
+    - soundfile
+    - torch
+    - praat-parselmouth

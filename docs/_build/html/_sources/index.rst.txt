@@ -1,10 +1,10 @@
-.. Dhwani documentation master file, created by
-   sphinx-quickstart on Wed Jan 19 19:31:15 2022.
+.. rtd-test-code documentation master file, created by
+   sphinx-quickstart on Sat Jan 22 22:04:52 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Dhwani's documentation!
-==================================
+Welcome to rtd-test-code's documentation!
+=========================================
 
 .. toctree::
    :maxdepth: 2
